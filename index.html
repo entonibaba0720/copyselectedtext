@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Javascript Copy Selected Text </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis pellentesque sapien vitae sagittis. Nunc nec egestas nibh, id dignissim nisi. Donec tristique luctus massa sit amet finibus. Sed facilisis nunc eu lobortis consequat. Aliquam egestas velit sit amet odio imperdiet, id mollis ipsum varius. Vestibulum fringilla, magna eu efficitur dignissim, urna purus dignissim lorem, id congue ipsum lectus at erat. Sed lorem nisl, semper non tellus faucibus, volutpat tempor eros. Fusce aliquam tortor sit amet feugiat pulvinar. Mauris ullamcorper neque sit amet sapien hendrerit, non ullamcorper lectus efficitur. Fusce arcu quam, gravida sed elit non, vehicula dictum turpis. Proin egestas elit vel tellus ornare, sit amet facilisis elit ornare. Cras dignissim volutpat leo ut rhoncus.</p>
+
+    <p>Vestibulum maximus sed mi eget condimentum. Vivamus sit amet vulputate lectus. Duis at odio egestas, sodales ex et, pharetra est. Mauris varius elementum massa vel scelerisque. Morbi rhoncus at justo nec interdum. Cras condimentum malesuada nunc, non pellentesque erat. Duis accumsan purus tortor, sit amet tristique odio vehicula eget. Suspendisse metus tortor, congue id fermentum rhoncus, pulvinar eu eros. Praesent cursus ante vel augue ultrices, nec ornare risus dignissim. Nullam nec leo neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+
+    <p>Nulla dolor arcu, feugiat elementum posuere in, aliquet nec elit. Vivamus egestas felis eu interdum finibus. Ut egestas euismod justo quis blandit. Phasellus eget turpis et mi porttitor rhoncus. Quisque rutrum nibh id ultrices sodales. Suspendisse potenti. Etiam ornare libero vel ex convallis tempus. Praesent ut elit elementum, hendrerit odio id, blandit metus. Nulla luctus, lectus vitae cursus facilisis, purus dui malesuada lectus, non egestas justo lorem eget augue. Fusce et mi luctus, ornare sem nec, fringilla nisi.</p>
+    
+    <button id="myButton" class="btn btn-primary">Copy Text</button>
+    <textarea name=copytext id="copytext" rows="6" cols="120">Placeholder</textarea>
+</div>
+    
+  <script>
+      
+    var myBtn = document.getElementById("myButton");
+    var myText = document.getElementById("copytext");
+    myBtn.addEventListener('click', myFunction);
+    function myFunction() {
+        var selectedText = window.getSelection().toString();
+        copytext.innerHTML = selectedText;
+        
+    }; 
+      
+  </script>
+    
+</body>
+</html>
